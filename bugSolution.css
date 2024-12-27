@@ -1,0 +1,24 @@
+To fix the issue, explicitly set the width of the parent container.  This ensures that the percentage widths are correctly calculated:
+
+```css
+.container {
+  width: 100%; /* or a specific pixel value */
+}
+div {
+  width: 50%;
+  float: left;
+}
+```
+
+Alternatively, consider using flexbox or grid for more robust layout control.  Flexbox offers greater control over item sizing and positioning:
+
+```css
+.container {
+  display: flex;
+}
+div {
+  width: 50%;
+}
+```
+
+This approach avoids the complexities of floating elements and provides a more predictable and maintainable layout.
